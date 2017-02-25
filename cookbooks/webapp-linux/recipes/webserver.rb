@@ -18,12 +18,12 @@ httpd_config 'customers' do
 end
 
 #Create the doc root dir
-directory '/var/www/customer/public_html' do
+directory node['webapp-linux']['document-root'] do
    recursive true
 end
 
 #Create default home page
-file '/var/www/customer/public_html/index.php' do
+file "#{node['webapp-linux']['document-root']}/index.php" do
    content '<html> This is temp page</html>'
    owner 'web_admin'
    group 'web_admin'
