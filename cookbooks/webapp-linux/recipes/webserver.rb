@@ -7,7 +7,7 @@
 #Install and start the Apache server
 httpd_service 'customers' do
    mpm 'prefork'
-   action [:create, :start}
+   action [:create, :start]
 end
 
 #Add customers site configuration
@@ -30,3 +30,11 @@ file "#{node['webapp-linux']['document-root']}/index.php" do
    mode '0644'
    action :create
 end
+
+#Open TCP port 80 for web traffic
+firewall_rule 'http' do
+   port 80
+   protocol :tcp
+   action :allow
+end
+
