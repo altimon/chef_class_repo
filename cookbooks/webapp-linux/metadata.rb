@@ -9,6 +9,9 @@ version '0.1.1'
 depends 'apt',      '~> 2.9.2'
 depends 'httpd',    '~> 0.3.3'
 depends 'firewall', '~> 2.3.0'
+depends 'mysql2_chef_gem', '~> 1.0.2'
+depends 'mysql', '~> 6.1.2'
+depends 'database', '~> 4.0.9'
 
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when

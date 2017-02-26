@@ -1,0 +1,13 @@
+{
+   "name": "webapp-linux",
+   "description": "Role to cfg install web server on Ubuntu nodes",
+   "chef_type": "role",
+   "json_class": "Chef::Role",
+   "default_attributes": {
+   },
+   "override_attributes": {
+   },
+   "run_list": [
+       "recipe[webapp-linux]"
+   ]
+}
