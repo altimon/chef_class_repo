@@ -35,6 +35,6 @@ end
 firewall_rule 'http' do
    port 80
    protocol :tcp
-   action :allow
+   action :create
 end
 
